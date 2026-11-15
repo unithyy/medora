@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Врачи MEDORA CLINIC — каталог специалистов</title>
+<meta name="description" content="Каталог демонстрационных врачей MEDORA CLINIC: поиск по имени, фильтр по специальности, сортировка по стажу и избранное.">
+<meta name="theme-color" content="#234236">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header class="site-h"><div class="wrap bar">
+<a class="logo" href="index.html" aria-label="MEDORA CLINIC — на главную"><img src="assets/icons/logo-mark.svg" alt="" width="36" height="36"><span>MEDORA<b>CLINIC</b></span></a>
+<nav id="nav" class="nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="doctors.html" aria-current="page">Врачи</a><a href="services.html">Услуги</a><a href="prices.html">Цены</a><a href="contacts.html">Контакты</a><a class="btn btn-p nav-cta" href="contacts.html#booking">Записаться</a></nav>
+<button class="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+</div></header>
+<main id="main">
+<section class="page-h"><div class="wrap"><h1>Наши врачи</h1><p class="lead">Найдите специалиста по направлению или имени. <span class="demo"></p></div></section>
+<section class="section" style="padding-top:24px"><div class="wrap">
+<form class="tools" role="search" aria-label="Поиск и фильтры врачей" onsubmit="return false">
+<div class="field"><label for="search">Поиск по имени</label><input type="search" id="search" placeholder="Например, Елена" autocomplete="off"></div>
+<div class="field"><label for="spec">Специальность</label><select id="spec"><option value="">Все специальности</option></select></div>
+<div class="field"><label for="sort">Сортировка</label><select id="sort"><option value="">По умолчанию</option><option value="desc">Стаж: по убыванию</option><option value="asc">Стаж: по возрастанию</option></select></div>
+<label class="chk"><input type="checkbox" id="favonly"> Только избранное</label>
+</form>
+<p class="count" id="count" aria-live="polite"></p>
+<div class="g g4" id="doctor-grid"></div>
+<div class="empty" id="empty" hidden><h2>Никого не нашли</h2><p>Измените запрос или сбросьте фильтры.</p><button type="button" class="btn btn-s" id="reset">Сбросить фильтры</button></div>
+<noscript><p>Для каталога нужен JavaScript. Вы можете сразу <a href="contacts.html#booking">записаться на приём</a>.</p></noscript>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap">
+<div class="fg">
+<div><h2>Разделы</h2><ul><li><a href="index.html">Главная</a></li><li><a href="doctors.html">Врачи</a></li><li><a href="services.html">Услуги</a></li><li><a href="prices.html">Цены</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+<div><h2>Контакты</h2><ul><li><a href="tel:+70000000000">+7 (000) 000-00-00</a></li><li><a href="mailto:info@medora.example">info@medora.example</a></li><li>Вымышленный адрес</li></ul></div>
+</div>
+</div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/doctors.js" defer></script>
+</body>
+</html>

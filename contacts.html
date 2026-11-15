@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контакты и запись на приём — MEDORA CLINIC (демо)</title>
+<meta name="description" content="Контакты MEDORA CLINIC: адрес, телефон, email, часы работы и демонстрационная форма записи на приём.">
+<meta name="theme-color" content="#234236">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header class="site-h"><div class="wrap bar">
+<a class="logo" href="index.html" aria-label="MEDORA CLINIC — на главную"><img src="assets/icons/logo-mark.svg" alt="" width="36" height="36"><span>MEDORA<b>CLINIC</b></span></a>
+<nav id="nav" class="nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="doctors.html">Врачи</a><a href="services.html">Услуги</a><a href="prices.html">Цены</a><a href="contacts.html" aria-current="page">Контакты</a><a class="btn btn-p nav-cta" href="contacts.html#booking">Записаться</a></nav>
+<button class="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+</div></header>
+<main id="main">
+<section class="page-h"><div class="wrap"><h1>Контакты</h1><p class="lead">Все данные на странице вымышлены и приведены для демонстрации.</p></div></section>
+<section class="section" style="padding-top:24px"><div class="wrap cg">
+<div class="card info"><h2 style="font-size:1.5rem">Как с нами связаться</h2><dl>
+<dt>Адрес</dt><dd>Вымышленный город, улица Примерная, дом 1</dd>
+<dt>Телефон</dt><dd><a href="tel:+70000000000">+7 (000) 000-00-00</a></dd>
+<dt>Email</dt><dd><a href="mailto:info@medora.example">info@medora.example</a></dd>
+<dt>Часы работы</dt><dd><dl class="hrs"><dt>Пн–Пт</dt><dd>08:00–20:00</dd><dt>Суббота</dt><dd>09:00–17:00</dd><dt>Воскресенье</dt><dd>выходной</dd></dl></dd></dl></div>
+<figure class="map"><svg viewBox="0 0 600 400" role="img" aria-label="Схема расположения клиники (демонстрационная)" preserveAspectRatio="xMidYMid slice"><rect width="600" height="400" fill="#e1e9df"/><path d="M0 120 H600 M0 280 H600 M150 0 V400 M420 0 V400" stroke="#fff" stroke-width="18"/><path d="M0 200 L600 160" stroke="#efe8da" stroke-width="26"/><rect x="190" y="30" width="190" height="70" rx="14" fill="#cfdccf"/><rect x="450" y="190" width="110" height="70" rx="14" fill="#cfdccf"/><rect x="30" y="300" width="90" height="70" rx="14" fill="#cfdccf"/><g transform="translate(285 175)"><path d="M0 62 C-34 22 -34 -10 0 -10 C34 -10 34 22 0 62Z" fill="#234236"/><circle cx="0" cy="10" r="10" fill="#fff"/></g><text x="300" y="268" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="700" font-size="18" fill="#234236">MEDORA CLINIC</text></svg></figure></div></section>
+<section class="section alt" id="booking" style="scroll-margin-top:72px" aria-labelledby="bk-h"><div class="wrap">
+<h2 id="bk-h" style="text-align:center">Запись на приём</h2>
+<p class="lead" style="margin:0 auto 28px;text-align:center">Демонстрационная форма: данные никуда не отправляются и не сохраняются.</p>
+<form class="form" id="booking-form" novalidate aria-labelledby="bk-h">
+<div class="row">
+<div class="field"><label for="name">Имя</label><input type="text" id="name" name="name" autocomplete="given-name" maxlength="60" required aria-describedby="err-name"><p class="err" id="err-name" role="alert" hidden></p></div>
+<div class="field"><label for="phone">Телефон</label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 900 000-00-00" required aria-describedby="err-phone"><p class="err" id="err-phone" role="alert" hidden></p></div>
+</div>
+<div class="row">
+<div class="field"><label for="doctor">Врач</label><select id="doctor" name="doctor" required aria-describedby="err-doctor"><option value="">Выберите врача</option></select><p class="err" id="err-doctor" role="alert" hidden></p></div>
+<div class="field"><label for="date">Желаемая дата</label><input type="date" id="date" name="date" required aria-describedby="err-date"><p class="err" id="err-date" role="alert" hidden></p></div>
+</div>
+<div class="field"><label for="comment">Комментарий</label><textarea id="comment" name="comment" maxlength="300" aria-describedby="hint-comment"></textarea><p class="hint" id="hint-comment">Не указывайте диагнозы и другие медицинские сведения. <span id="comment-count">0 / 300</span></p></div>
+<div class="field"><label class="consent" for="consent"><input type="checkbox" id="consent" name="consent" required aria-describedby="err-consent"><span>Я согласен(на) на обработку персональных данных (демонстрационное согласие, данные не передаются).</span></label><p class="err" id="err-consent" role="alert" hidden></p></div>
+<button type="submit" class="btn btn-p">Записаться на приём</button>
+<div class="ok" id="form-ok" role="status" tabindex="-1" hidden><p><strong>Демонстрационная заявка сформирована</strong></p><p id="ok-text"></p><p>Заявка никуда не отправлена и нигде не сохранена.</p></div>
+</form></div></section>
+</main>
+<footer class="foot"><div class="wrap">
+<div class="fg">
+<div><h2>MEDORA CLINIC</h2><p>Демонстрационный сайт вымышленной частной клиники для портфолио веб-разработчика. Врачи, отзывы, цены и контакты придуманы и не относятся к реальным людям и организациям.</p></div>
+<div><h2>Разделы</h2><ul><li><a href="index.html">Главная</a></li><li><a href="doctors.html">Врачи</a></li><li><a href="services.html">Услуги</a></li><li><a href="prices.html">Цены</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+<div><h2>Контакты (демо)</h2><ul><li><a href="tel:+70000000000">+7 (000) 000-00-00</a></li><li><a href="mailto:info@medora.example">info@medora.example</a></li><li>Вымышленный адрес</li></ul></div>
+</div>
+<small>© <span id="year">2026</span> MEDORA CLINIC. Учебный проект: не является медицинской организацией, услугой или публичной офертой. Материалы сайта не заменяют консультацию врача.</small>
+</div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/form.js" defer></script>
+</body>
+</html>
